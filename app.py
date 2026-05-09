@@ -10,7 +10,7 @@ with st.sidebar:
     st.header("Controls")
 
     img = st.file_uploader(
-        "Upload the photos of your note",
+        "Upload the photos of your Semester final question.",
         type=["jpg", "jpeg", "png"]
     )
 
