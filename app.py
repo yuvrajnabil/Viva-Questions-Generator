@@ -26,7 +26,7 @@ if pressed:
         pil_image = Image.open(img)
 
         with st.container(border=True):
-            st.subheader("Your note")
+            st.subheader("Viva Insight")
             generated_note = note_generator(pil_image)
             st.markdown(generated_note)
 
