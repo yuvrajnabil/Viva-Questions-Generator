@@ -1,15 +1,14 @@
-import google.genai as genai
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
+from google import genai
 
-
-#loading the environment variable
 load_dotenv()
 
-my_api_key = os.getenv("API_KEY")
+api_key = os.getenv("API_KEY")
+if not api_key:
+    raise ValueError("Missing API key")
 
-#initializing a client
-client= genai.Client(api_key = my_api_key)
+client = genai.Client(api_key=api_key)
 
 # note Generator
 def note_generator(images):
