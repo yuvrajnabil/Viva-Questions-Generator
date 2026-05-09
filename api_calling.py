@@ -1,8 +1,8 @@
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from google import genai
 
-load_dotenv()
+# load_dotenv()
 
 api_key = os.getenv("API_KEY")
 if not api_key:
