@@ -1,15 +1,15 @@
-import os
-# from dotenv import load_dotenv
-import streamlit as st
 from google import genai
+from dotenv import load_dotenv
+import os
 
-# load_dotenv()
 
-api_key = os.getenv("API_KEY")
-if not api_key:
-    raise ValueError("Missing API key")
+#loading the environment variable
+load_dotenv()
 
-client = genai.Client(api_key=api_key)
+my_api_key = os.getenv("API_KEY")
+
+#initializing a client
+client= genai.Client(api_key = my_api_key)
 
 # note Generator
 def note_generator(images):
